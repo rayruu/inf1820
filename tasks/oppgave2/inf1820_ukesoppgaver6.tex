@@ -1,0 +1,36 @@
+\documentclass[11pt]{article}
+\usepackage{times}
+\usepackage{url}
+\usepackage{latexsym}
+%\setlength\titlebox{6.5cm}    % You can expand the title box if you
+% really have to
+
+\title{INF1820 Ukesoppgaver 6}
+\date{}
+
+\usepackage{tree-dvips}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\item {\bf Endelige tilstandsmaskiner} Tegn en deterministisk FSA som aksepterer f{\o}lgende spr{\aa}k:
+ \begin{enumerate}
+\item mengden av strenger p{\aa} formen ``Goo...gle'' med vilk{\aa}rlig mange o'er etter de to f{\o}rste
+\item \verb=(a|b)c=
+\item \verb=ab|bc=
+\item \verb=ab|ac= (NB! Pass p{\aa} at det fra enhver tilstand er h{\o}yst \emph{en} tilstand merket med et symbol)
+\item \verb=c(a|b)*c=
+\item mengden av alle strenger i \verb|[ab]*| som inneholder \emph{n{\o}yaktig} 2 a'er. Start med {\aa} formulere et mer presist regul{\ae}rt uttrykk for deretter {\aa} tegne en FSA, samt transisjonstabellen for FSA'en din.
+ \end{enumerate}
+\item {\bf Regul{\ae}re uttrykk}
+\begin{enumerate}
+\item Skriv et regul{\ae}rt uttrykk som matcher typiske e-postadresser. 
+\item Skriv en Python-funksjon som tar inn en mulig e-postadresse og returnerer 'True' dersom den er lovlig og 'False' ellers.
+\item Skriv en Python-funksjon som henter ut en liste med e-postadresser fra en tekst. Test funksjonen p{\aa} 'email.txt' (Tilgjengelig fra emnesiden).
+\item Implementer tester av funksjonene dine som s{\aa}kalte 'doctests' (Se HTTLCS seksjon 5.8), kj{\o}r skriptet og forsikre deg om at funksjonene dine fungerer som de skal.
+
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
