@@ -21,7 +21,7 @@ dev_gold er:
 """
 import re
 # oppgave 1 c:
-gyldig_ord = r'[\d]+-[\w]+|[\.\.\.]|[\d]+\.?[\d]+|[\wæøå]+-[\w]+|[\w]+\.[\w]|[\w]+\'[\w]+|[\wæøå]+|[,«»\.:;(!)"\?\+-§]'
+gyldig_ord = r'[\d]+-[\w]+[\d]+\.?[\d]+|[\wæøå]+-[\w]+|[\w]+\.[\w]|[\w]+\'[\w]+|[\wæøå]+|[,«»\.:;(!)"\?\+-§\.{3}]'
 
 f = open("dev.txt")
 outfile = open("obligtekst.txt", "w")
