@@ -1,0 +1,43 @@
+import nltk
+from nltk import bigrams
+from lm import *
+
+
+
+# Oppgave 1:
+# opretter LM klasse til aa perpleksitere news og adventure
+m = LM()
+
+# Henter news og adventure for videre bruk
+news=nltk.corpus.brown.sents(categories='news')
+adventure=nltk.corpus.brown.sents(categories='adventure')
+
+# initial parametre
+perpNews = 0.0
+perpAdventure = 0.0
+
+# beregner perplexitet:
+perpNews = m.perplexity(news)
+perpAdventure = m.perplexity(adventure)
+
+# printer ut perplexitet.
+print("Perpleksitet til news: %.2f" %perpNews)
+print("Perpleksitet til adventure: %.2f" %perpAdventure)
+
+
+""" Oppgave 1 - evaluering av spraakmodeller
+
+$ python oblig2b_steinrr.py
+Perpleksitet til news: 55.01
+Perpleksitet til adventure: 82.51
+
+Perpleksiteten tiil adventure er hoeyeere fordi klassifikatoren vi benytter i LM er ikke trent paa dette korpuset.
+Perpleksiteten til news ville ha veart lavere hvis klassifikatoren vi benytter hadde bare veart trent paa news.
+Men dette er ikke bra pga da ville perpleksiteten til adventure veare enda hoyere enn den er naa.
+
+"""
+
+for setning in news:
+    hei = m.zipfity(setning)
+
+print(hei)
